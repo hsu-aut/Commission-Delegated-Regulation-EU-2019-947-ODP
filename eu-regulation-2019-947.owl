@@ -1,0 +1,544 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.hsu-ifa.de/ontologies/EU_2019-947#"
+     xml:base="http://www.hsu-ifa.de/ontologies/EU_2019-947"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://w3id.org/hsu-aut/eu-regulation2019-947">
+        <owl:versionIRI rdf:resource="http://w3id.org/hsu-aut/eu-regulation2019-947/1.0.0"/>
+        <rdfs:comment>An ontology for Commission Implementing Regulation (EU) 2019/947
+of 24 May 2019 on the rules and procedures for the operation of unmanned aircraft. See https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32019R0947 for access to the law.</rdfs:comment>
+        <rdfs:comment>This ODP was created with a focus on the change of location of objects</rdfs:comment>
+        <rdfs:isDefinedBy>https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32019R0947</rdfs:isDefinedBy>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://w3id.org/hsu-aut/eu-regulation2019-947#has_Distance -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/hsu-aut/eu-regulation2019-947#has_Distance">
+        <rdfs:domain rdf:resource="http://w3id.org/hsu-aut/eu-regulation2019-947#AssemblyOfPeople"/>
+        <rdfs:domain rdf:resource="http://w3id.org/hsu-aut/eu-regulation2019-947#UAS_Open"/>
+        <rdfs:range rdf:resource="http://w3id.org/hsu-aut/eu-regulation2019-947#Distance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/hsu-aut/eu-regulation2019-947#has_DroneLicense -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/hsu-aut/eu-regulation2019-947#has_DroneLicense">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://w3id.org/hsu-aut/eu-regulation2019-947#RemotePilot"/>
+        <rdfs:range rdf:resource="http://w3id.org/hsu-aut/eu-regulation2019-947#DroneLicense"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/hsu-aut/eu-regulation2019-947#is_carrying -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/hsu-aut/eu-regulation2019-947#is_carrying">
+        <rdfs:domain rdf:resource="http://w3id.org/hsu-aut/eu-regulation2019-947#UnmannedAircraftSystem"/>
+        <rdfs:range rdf:resource="http://w3id.org/hsu-aut/eu-regulation2019-947#DangerousGood"/>
+        <rdfs:range rdf:resource="http://w3id.org/hsu-aut/eu-regulation2019-947#Human"/>
+        <owl:propertyDisjointWith rdf:resource="http://w3id.org/hsu-aut/eu-regulation2019-947#is_equipped_with"/>
+        <rdfs:comment>equivalent to transporting. Equipment is not carried</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/hsu-aut/eu-regulation2019-947#is_dropping -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/hsu-aut/eu-regulation2019-947#is_dropping">
+        <rdfs:domain rdf:resource="http://w3id.org/hsu-aut/eu-regulation2019-947#UAS_Open"/>
+        <rdfs:range rdf:resource="http://w3id.org/hsu-aut/eu-regulation2019-947#Material"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/hsu-aut/eu-regulation2019-947#is_equipped_with -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/hsu-aut/eu-regulation2019-947#is_equipped_with">
+        <rdfs:domain rdf:resource="http://w3id.org/hsu-aut/eu-regulation2019-947#UnmannedAircraftSystem"/>
+        <rdfs:range rdf:resource="http://w3id.org/hsu-aut/eu-regulation2019-947#Equipment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/hsu-aut/eu-regulation2019-947#is_overflying -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/hsu-aut/eu-regulation2019-947#is_overflying">
+        <rdfs:domain rdf:resource="http://w3id.org/hsu-aut/eu-regulation2019-947#UAS_Open"/>
+        <rdfs:range rdf:resource="http://w3id.org/hsu-aut/eu-regulation2019-947#AssemblyOfPeople"/>
+        <rdfs:range rdf:resource="http://w3id.org/hsu-aut/eu-regulation2019-947#Obstacle"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://w3id.org/hsu-aut/eu-regulation2019-947#has_CharacteristicDimension -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/hsu-aut/eu-regulation2019-947#has_CharacteristicDimension">
+        <rdfs:domain rdf:resource="http://w3id.org/hsu-aut/eu-regulation2019-947#UnmannedAircraftSystem"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/hsu-aut/eu-regulation2019-947#has_Distance_Horizontal -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/hsu-aut/eu-regulation2019-947#has_Distance_Horizontal">
+        <rdfs:domain rdf:resource="http://w3id.org/hsu-aut/eu-regulation2019-947#Distance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/hsu-aut/eu-regulation2019-947#has_Distance_Radial -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/hsu-aut/eu-regulation2019-947#has_Distance_Radial">
+        <rdfs:domain rdf:resource="http://w3id.org/hsu-aut/eu-regulation2019-947#Distance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/hsu-aut/eu-regulation2019-947#has_Distance_Vertical -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/hsu-aut/eu-regulation2019-947#has_Distance_Vertical">
+        <rdfs:domain rdf:resource="http://w3id.org/hsu-aut/eu-regulation2019-947#Distance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/hsu-aut/eu-regulation2019-947#has_Height_Relative -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/hsu-aut/eu-regulation2019-947#has_Height_Relative">
+        <rdfs:domain rdf:resource="http://w3id.org/hsu-aut/eu-regulation2019-947#UAS_Open"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment>Height to Surface</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/hsu-aut/eu-regulation2019-947#has_MaximumOperatingSpeed -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/hsu-aut/eu-regulation2019-947#has_MaximumOperatingSpeed">
+        <rdfs:domain rdf:resource="http://w3id.org/hsu-aut/eu-regulation2019-947#UnmannedAircraftSystem"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment>Maximum Speed in meters per second</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/hsu-aut/eu-regulation2019-947#has_MaximumTakeOffMass -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/hsu-aut/eu-regulation2019-947#has_MaximumTakeOffMass">
+        <rdfs:domain rdf:resource="http://w3id.org/hsu-aut/eu-regulation2019-947#UAS_Open"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/hsu-aut/eu-regulation2019-947#has_ObstacleHeight -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/hsu-aut/eu-regulation2019-947#has_ObstacleHeight">
+        <rdfs:domain rdf:resource="http://w3id.org/hsu-aut/eu-regulation2019-947#Obstacle"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment>Height of an Obstacle</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/hsu-aut/eu-regulation2019-947#is_BVLOS-Mode -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/hsu-aut/eu-regulation2019-947#is_BVLOS-Mode">
+        <rdfs:domain rdf:resource="http://w3id.org/hsu-aut/eu-regulation2019-947#UnmannedAircraftSystem"/>
+        <owl:propertyDisjointWith rdf:resource="http://w3id.org/hsu-aut/eu-regulation2019-947#is_VLOS-Mode"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/hsu-aut/eu-regulation2019-947#is_Follow-Me-Mode -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/hsu-aut/eu-regulation2019-947#is_Follow-Me-Mode">
+        <rdfs:domain rdf:resource="http://w3id.org/hsu-aut/eu-regulation2019-947#UAS_Open"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <owl:propertyDisjointWith rdf:resource="http://w3id.org/hsu-aut/eu-regulation2019-947#is_VLOS-Mode"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/hsu-aut/eu-regulation2019-947#is_LowSpeedMode -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/hsu-aut/eu-regulation2019-947#is_LowSpeedMode">
+        <rdfs:domain rdf:resource="http://w3id.org/hsu-aut/eu-regulation2019-947#UnmannedAircraftSystem"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/hsu-aut/eu-regulation2019-947#is_SafeDistance -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/hsu-aut/eu-regulation2019-947#is_SafeDistance">
+        <rdfs:domain rdf:resource="http://w3id.org/hsu-aut/eu-regulation2019-947#Distance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/hsu-aut/eu-regulation2019-947#is_VLOS-Mode -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/hsu-aut/eu-regulation2019-947#is_VLOS-Mode">
+        <rdfs:domain rdf:resource="http://w3id.org/hsu-aut/eu-regulation2019-947#UAS_Open"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://w3id.org/hsu-aut/eu-regulation2019-947#AssemblyOfPeople -->
+
+    <owl:Class rdf:about="http://w3id.org/hsu-aut/eu-regulation2019-947#AssemblyOfPeople">
+        <rdfs:comment>Assemblies of people means gatherings where persons are unable to move away due to the density of the people present;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/hsu-aut/eu-regulation2019-947#CommercialAreas -->
+
+    <owl:Class rdf:about="http://w3id.org/hsu-aut/eu-regulation2019-947#CommercialAreas">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/hsu-aut/eu-regulation2019-947#GeographicalZone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/hsu-aut/eu-regulation2019-947#DangerousGood -->
+
+    <owl:Class rdf:about="http://w3id.org/hsu-aut/eu-regulation2019-947#DangerousGood">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/hsu-aut/eu-regulation2019-947#Material"/>
+        <rdfs:comment>Dangerous goods means articles or substances, which are capable of posing a hazard to health, safety, property or the environment in the case of an incident or accident, that the unmanned aircraft is carrying as its payload, including in particular:
+
+(a) explosives (mass explosion hazard, blast projection hazard, minor blast hazard, major fire hazard, blasting agents, extremely insensitive explosives);
+
+(b) gases (flammable gas, non-flammable gas, poisonous gas, oxygen, inhalation hazard);
+
+(c) flammable liquids (flammable liquids; combustible, fuel oil, gasoline);
+
+(d) flammable solids (flammable solids, spontaneously combustible solids, dangerous when wet);
+
+(e) oxidising agents and organic peroxides;
+
+(f) toxic and infectious substances (poison, biohazard);
+
+(g) radioactive substances;
+
+(h) corrosive substances;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/hsu-aut/eu-regulation2019-947#Distance -->
+
+    <owl:Class rdf:about="http://w3id.org/hsu-aut/eu-regulation2019-947#Distance"/>
+    
+
+
+    <!-- http://w3id.org/hsu-aut/eu-regulation2019-947#DroneLicense -->
+
+    <owl:Class rdf:about="http://w3id.org/hsu-aut/eu-regulation2019-947#DroneLicense">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3id.org/hsu-aut/eu-regulation2019-947#A2"/>
+                    <rdf:Description rdf:about="http://w3id.org/hsu-aut/eu-regulation2019-947#None"/>
+                    <rdf:Description rdf:about="http://w3id.org/hsu-aut/eu-regulation2019-947#A1/A3"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/hsu-aut/eu-regulation2019-947#Equipment -->
+
+    <owl:Class rdf:about="http://w3id.org/hsu-aut/eu-regulation2019-947#Equipment"/>
+    
+
+
+    <!-- http://w3id.org/hsu-aut/eu-regulation2019-947#GeoAwarenessSystem -->
+
+    <owl:Class rdf:about="http://w3id.org/hsu-aut/eu-regulation2019-947#GeoAwarenessSystem">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/hsu-aut/eu-regulation2019-947#Equipment"/>
+        <rdfs:comment>Geo-awareness means a function that, based on the data provided by Member States, detects a potential breach of airspace limitations and alerts the remote pilots so that they can take immediate and effective action to prevent that breach</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/hsu-aut/eu-regulation2019-947#GeographicalZone -->
+
+    <owl:Class rdf:about="http://w3id.org/hsu-aut/eu-regulation2019-947#GeographicalZone">
+        <rdfs:comment>UAS geographical zone means a portion of airspace established by the competent authority that facilitates, restricts or excludes UAS operations in order to address risks pertaining to safety, privacy, protection of personal data, security or the environment, arising from UAS operations</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/hsu-aut/eu-regulation2019-947#Human -->
+
+    <owl:Class rdf:about="http://w3id.org/hsu-aut/eu-regulation2019-947#Human"/>
+    
+
+
+    <!-- http://w3id.org/hsu-aut/eu-regulation2019-947#IndustrialAreas -->
+
+    <owl:Class rdf:about="http://w3id.org/hsu-aut/eu-regulation2019-947#IndustrialAreas">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/hsu-aut/eu-regulation2019-947#GeographicalZone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/hsu-aut/eu-regulation2019-947#Material -->
+
+    <owl:Class rdf:about="http://w3id.org/hsu-aut/eu-regulation2019-947#Material"/>
+    
+
+
+    <!-- http://w3id.org/hsu-aut/eu-regulation2019-947#Obstacle -->
+
+    <owl:Class rdf:about="http://w3id.org/hsu-aut/eu-regulation2019-947#Obstacle"/>
+    
+
+
+    <!-- http://w3id.org/hsu-aut/eu-regulation2019-947#RecreationalAreas -->
+
+    <owl:Class rdf:about="http://w3id.org/hsu-aut/eu-regulation2019-947#RecreationalAreas">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/hsu-aut/eu-regulation2019-947#GeographicalZone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/hsu-aut/eu-regulation2019-947#RemoteIdentificationSystem -->
+
+    <owl:Class rdf:about="http://w3id.org/hsu-aut/eu-regulation2019-947#RemoteIdentificationSystem">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/hsu-aut/eu-regulation2019-947#Equipment"/>
+        <rdfs:comment>Direct remote identification means a system that ensures the local broadcast of information about a unmanned aircraft in operation, including the marking of the unmanned aircraft, so that this information can be obtained without physical access to the unmanned aircraft</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/hsu-aut/eu-regulation2019-947#RemotePilot -->
+
+    <owl:Class rdf:about="http://w3id.org/hsu-aut/eu-regulation2019-947#RemotePilot">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3id.org/hsu-aut/eu-regulation2019-947#Human"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://w3id.org/hsu-aut/eu-regulation2019-947#has_DroneLicense"/>
+                        <owl:someValuesFrom rdf:resource="http://w3id.org/hsu-aut/eu-regulation2019-947#DroneLicense"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/hsu-aut/eu-regulation2019-947#ResidentiAlrea -->
+
+    <owl:Class rdf:about="http://w3id.org/hsu-aut/eu-regulation2019-947#ResidentiAlrea">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/hsu-aut/eu-regulation2019-947#GeographicalZone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/hsu-aut/eu-regulation2019-947#SailPlanes -->
+
+    <owl:Class rdf:about="http://w3id.org/hsu-aut/eu-regulation2019-947#SailPlanes"/>
+    
+
+
+    <!-- http://w3id.org/hsu-aut/eu-regulation2019-947#Surface -->
+
+    <owl:Class rdf:about="http://w3id.org/hsu-aut/eu-regulation2019-947#Surface"/>
+    
+
+
+    <!-- http://w3id.org/hsu-aut/eu-regulation2019-947#UASOperationCategories -->
+
+    <owl:Class rdf:about="http://w3id.org/hsu-aut/eu-regulation2019-947#UASOperationCategories">
+        <rdfs:label>Operating categories for UAS</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/hsu-aut/eu-regulation2019-947#UAS_Certified -->
+
+    <owl:Class rdf:about="http://w3id.org/hsu-aut/eu-regulation2019-947#UAS_Certified">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/hsu-aut/eu-regulation2019-947#UASOperationCategories"/>
+        <rdfs:comment>UAS operations in the ‘certified’ category shall require the certification of the UAS pursuant to Delegated Regulation (EU) 2019/945 and the certification of the operator and, where applicable, the licensing of the remote pilot</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/hsu-aut/eu-regulation2019-947#UAS_Open -->
+
+    <owl:Class rdf:about="http://w3id.org/hsu-aut/eu-regulation2019-947#UAS_Open">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/hsu-aut/eu-regulation2019-947#UASOperationCategories"/>
+        <rdfs:comment>UAS operations in the ‘open’ category shall not be subject to any prior operational authorisation, nor to an operational declaration by the UAS operator before the operation takes place</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/hsu-aut/eu-regulation2019-947#UAS_Open_A1 -->
+
+    <owl:Class rdf:about="http://w3id.org/hsu-aut/eu-regulation2019-947#UAS_Open_A1">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/hsu-aut/eu-regulation2019-947#UAS_Open"/>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/hsu-aut/eu-regulation2019-947#UAS_Open_A2 -->
+
+    <owl:Class rdf:about="http://w3id.org/hsu-aut/eu-regulation2019-947#UAS_Open_A2">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/hsu-aut/eu-regulation2019-947#UAS_Open"/>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/hsu-aut/eu-regulation2019-947#UAS_Open_A3 -->
+
+    <owl:Class rdf:about="http://w3id.org/hsu-aut/eu-regulation2019-947#UAS_Open_A3">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/hsu-aut/eu-regulation2019-947#UAS_Open"/>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/hsu-aut/eu-regulation2019-947#UAS_Specific -->
+
+    <owl:Class rdf:about="http://w3id.org/hsu-aut/eu-regulation2019-947#UAS_Specific">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/hsu-aut/eu-regulation2019-947#UASOperationCategories"/>
+        <rdfs:comment>UAS operations in the ‘specific’ category shall require an operational authorisation issued by the competent authority pursuant to Article 12 or an authorisation received in accordance with Article 16, or, under circumstances defined in Article 5(5), a declaration to be made by a UAS operator</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/hsu-aut/eu-regulation2019-947#UninvolvedPerson -->
+
+    <owl:Class rdf:about="http://w3id.org/hsu-aut/eu-regulation2019-947#UninvolvedPerson">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/hsu-aut/eu-regulation2019-947#Human"/>
+        <rdfs:comment>Uninvolved persons means persons who are not participating in the UAS operation or who are not aware of the instructions and safety precautions given by the UAS operator</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/hsu-aut/eu-regulation2019-947#UnmannedAircraftSystem -->
+
+    <owl:Class rdf:about="http://w3id.org/hsu-aut/eu-regulation2019-947#UnmannedAircraftSystem">
+        <rdfs:comment>Unmanned aircraft system (UAS) means an unmanned aircraft and the equipment to control it remotely</rdfs:comment>
+        <rdfs:label>Unmanned aircraft system</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://w3id.org/hsu-aut/eu-regulation2019-947#A2 -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/hsu-aut/eu-regulation2019-947#A2">
+        <rdf:type rdf:resource="http://w3id.org/hsu-aut/eu-regulation2019-947#DroneLicense"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/hsu-aut/eu-regulation2019-947#None -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/hsu-aut/eu-regulation2019-947#None">
+        <rdf:type rdf:resource="http://w3id.org/hsu-aut/eu-regulation2019-947#DroneLicense"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/hsu-aut/eu-regulation2019-947#A1/A3 -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/hsu-aut/eu-regulation2019-947#A1/A3">
+        <rdf:type rdf:resource="http://w3id.org/hsu-aut/eu-regulation2019-947#DroneLicense"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://w3id.org/hsu-aut/eu-regulation2019-947#AssemblyOfPeople"/>
+            <rdf:Description rdf:about="http://w3id.org/hsu-aut/eu-regulation2019-947#Distance"/>
+            <rdf:Description rdf:about="http://w3id.org/hsu-aut/eu-regulation2019-947#DroneLicense"/>
+            <rdf:Description rdf:about="http://w3id.org/hsu-aut/eu-regulation2019-947#Equipment"/>
+            <rdf:Description rdf:about="http://w3id.org/hsu-aut/eu-regulation2019-947#GeographicalZone"/>
+            <rdf:Description rdf:about="http://w3id.org/hsu-aut/eu-regulation2019-947#Human"/>
+            <rdf:Description rdf:about="http://w3id.org/hsu-aut/eu-regulation2019-947#Material"/>
+            <rdf:Description rdf:about="http://w3id.org/hsu-aut/eu-regulation2019-947#Obstacle"/>
+            <rdf:Description rdf:about="http://w3id.org/hsu-aut/eu-regulation2019-947#SailPlanes"/>
+            <rdf:Description rdf:about="http://w3id.org/hsu-aut/eu-regulation2019-947#Surface"/>
+            <rdf:Description rdf:about="http://w3id.org/hsu-aut/eu-regulation2019-947#UASOperationCategories"/>
+            <rdf:Description rdf:about="http://w3id.org/hsu-aut/eu-regulation2019-947#UnmannedAircraftSystem"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
